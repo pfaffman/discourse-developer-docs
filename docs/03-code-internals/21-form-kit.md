@@ -99,6 +99,8 @@ Initial state of the data you give to the form.
 When working with an object object we recommend to setup your form data object like this:
 
 ```js
+import { getProperties } from "@ember/object";
+...
 @cached
 get formData() {
   return getProperties(this.model, "foo", "bar", "baz");
